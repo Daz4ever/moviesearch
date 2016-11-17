@@ -1,0 +1,20 @@
+<div class="container">
+
+
+  <form class="down" ng-submit="movieSearchFunc()">
+    <input type="text" name="name" placeholder="Search Movies" ng-model="movieText" value="">
+  </form>
+
+  <h1 class="heading">Here are your results for {{pageName}}</h1>
+  <br><br>
+  <br><br>
+
+  <div class="row">
+    <div ng-if="movie.poster_path" ng-repeat="movie in movieResults" class="height col-sm-4 col-lg-4">
+      <img ui-sref="movieInfo({SearchId: MovieId })" class="sizing"  ng-src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}">
+    </div>
+
+
+
+  </div>
+</div>
